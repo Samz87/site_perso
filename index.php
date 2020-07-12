@@ -3,9 +3,9 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('BASE_URL', '/Hotel/');
+define('BASE_URL', '/site_perso/');
 
-$requestUri = str_replace('/Hotel/', '', $_SERVER['REQUEST_URI']);
+$requestUri = str_replace('/site_perso/', '', $_SERVER['REQUEST_URI']);
 
 // On sépare les paramètres de la requête
 $requestParams = explode('/', $requestUri);

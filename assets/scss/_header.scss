@@ -1,0 +1,9 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+header>.container {
+    background-color: red;
+    width: fit-content;
+}
