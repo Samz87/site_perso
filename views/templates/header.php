@@ -10,19 +10,19 @@
 
 <body>
     <header>
-        <div class="header_container">
-            <div class="container">
+        <div class="id_container">
+            <a href="<?php echo BASE_URL; ?>">
                 <img src="http://placehold.it/80x80" alt="">
-            </div>
-            <div class="container">
-
-            </div>
-            <div class="container">
-                <button class="header-btn">A propos de moi</button>
-                <button class="header-btn">Mes objectifs</button>
-                <button class="header-btn">Actualités</button>
-                <button class="header-btn">Me contacter</button>
-            </div>
+            </a>
+            <h1>Developpy</h1>
+        </div>
+        <div class="title_container">
+        </div>
+        <div class="btn_container">
+            <button class="header-btn">A propos</button>
+            <button class="header-btn">Objectifs</button>
+            <button class="header-btn">Actualités</button>
+            <button class="header-btn">Me contacter</button>
         </div>
     </header>
 </body>
