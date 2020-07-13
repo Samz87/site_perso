@@ -1,0 +1,30 @@
+footer {
+    width: 100vw;
+    height: 5vh;
+    background-color: $bg-darkgrey;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .links {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a {
+            color: $bg-lightgrey;
+            padding: 20px;
+        }
+    }
+
+    .info {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        p {
+            color: $bg-lightgrey;
+            padding-left: 20px;
+        }
+    }
+}
