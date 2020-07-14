@@ -20,10 +20,10 @@
         <div class="title_container">
         </div>
         <div class="btn_container">
-            <button class="header-btn">A propos</button>
-            <button class="header-btn">Objectifs</button>
-            <button class="header-btn">Actualités</button>
-            <button class="header-btn">Me contacter</button>
+            <button onclick="window.location.href = '<?php echo BASE_URL; ?>about'">A propos de moi</button>
+            <button onclick="window.location.href = '<?php echo BASE_URL; ?>objectives'">Objectifs</button>
+            <button onclick="window.location.href = '<?php echo BASE_URL; ?>blog'">Actualités</button>
+            <button onclick="window.location.href = '<?php echo BASE_URL; ?>contact'">Me contacter</button>
         </div>
     </header>
 </body>
