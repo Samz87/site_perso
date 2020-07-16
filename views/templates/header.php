@@ -12,19 +12,24 @@
 
 <body>
     <header>
-        <div class="id_container">
-            <a href="<?php echo BASE_URL; ?>">
-                <img src="http://placehold.it/80x80" alt="">
-            </a>
-            <h1>Developpy</h1>
-        </div>
-        <div class="title_container">
-        </div>
-        <div class="btn_container">
-            <button onclick="window.location.href = '<?php echo BASE_URL; ?>about'">A propos de moi</button>
-            <button onclick="window.location.href = '<?php echo BASE_URL; ?>objectives'">Objectifs</button>
-            <button onclick="window.location.href = '<?php echo BASE_URL; ?>blog'">Actualités</button>
-            <button onclick="window.location.href = '<?php echo BASE_URL; ?>contact'">Me contacter</button>
+        <div class="row">
+            <div class="header-col col-4 id-container">
+                <img src="https://placehold.it/80x80" alt="">
+                <h2>Developpy</h2>
+            </div>
+            <div class="header-col col-4">
+                Titre de la page
+            </div>
+            <div class="header-col col-4">
+                <div class="navbar"> 
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="#">Objectifs</a></li>
+                        <li><a href="#">Actualités</a></li>
+                        <li><a href="#">Me contacter</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 </body>
