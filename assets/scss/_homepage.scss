@@ -12,13 +12,16 @@
     flex-direction: column;
     width: 49vw;
     p {
-        padding: 2rem;
+      padding: 2rem;
     }
-    .card {
-        height: 60px;
-        width: 80px;
+    &#cards-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      .card {
         border: 1px black solid;
-        background-color: $bg-darkgrey;
+        background-color: $yellow;
+      }
     }
   }
 }
