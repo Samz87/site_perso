@@ -14,19 +14,21 @@
     <header class="container-fluid">
         <div class="row">
             <div class="header-col col-sm-4 col-xs-12 id-container">
-                <img class="" src="https://placehold.it/80x80" alt="">
-                <h2>Developpy</h2>
+                <a href="<?php echo BASE_URL ?>">
+                    <img src="https://placehold.it/80x80" alt="">
+                </a>
+                <h2 class="justify-content-md-start justify-content-center">Developpy</h2>
             </div>
-            <div class="header-col col-sm-4 col-xs-12">
+            <div class="header-col col-sm-4 col-xs-12 d-flex justify-content-center">
                 <h1>Titre de la page</h1>
             </div>
             <div class="header-col col-sm-4 col-xs-12">
                 <nav class="nav justify-content-end">
                     <!-- alignement droite -->
-                    <a class="nav-link active" href="<?php echo BASE_URL?>about">A propos</a>
-                    <a class="nav-link" href="<?php echo BASE_URL?>objectives">Objectifs</a>
-                    <a class="nav-link" href="<?php echo BASE_URL?>blog">Actualités</a>
-                    <a class="nav-link" href="<?php echo BASE_URL?>contact">Contact</a>
+                    <a class="nav-link active" href="<?php echo BASE_URL ?>about">A propos</a>
+                    <a class="nav-link" href="<?php echo BASE_URL ?>objectives">Objectifs</a>
+                    <a class="nav-link" href="<?php echo BASE_URL ?>blog">Actualités</a>
+                    <a class="nav-link" href="<?php echo BASE_URL ?>contact">Contact</a>
                 </nav>
             </div>
         </div>

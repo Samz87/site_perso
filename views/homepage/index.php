@@ -26,5 +26,5 @@
         </section>
 
     </main>
-</body>
+</body> -->
 <?php require_once('views/templates/footer.php');
