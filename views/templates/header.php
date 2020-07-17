@@ -11,24 +11,23 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="row">
-            <div class="header-col col-4 id-container">
-                <img src="https://placehold.it/80x80" alt="">
+            <div class="header-col col-sm-4 col-xs-12 id-container">
+                <img class="" src="https://placehold.it/80x80" alt="">
                 <h2>Developpy</h2>
             </div>
-            <div class="header-col col-4">
-                Titre de la page
+            <div class="header-col col-sm-4 col-xs-12">
+                <h1>Titre de la page</h1>
             </div>
-            <div class="header-col col-4">
-                <div class="navbar"> 
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">A propos</a></li>
-                        <li><a href="#">Objectifs</a></li>
-                        <li><a href="#">Actualités</a></li>
-                        <li><a href="#">Me contacter</a></li>
-                    </ul>
-                </div>
+            <div class="header-col col-sm-4 col-xs-12">
+                <nav class="nav justify-content-end">
+                    <!-- alignement droite -->
+                    <a class="nav-link active" href="<?php echo BASE_URL?>about">A propos</a>
+                    <a class="nav-link" href="<?php echo BASE_URL?>objectives">Objectifs</a>
+                    <a class="nav-link" href="<?php echo BASE_URL?>blog">Actualités</a>
+                    <a class="nav-link" href="<?php echo BASE_URL?>contact">Contact</a>
+                </nav>
             </div>
         </div>
     </header>
