@@ -14,10 +14,45 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12 homepage-section">
-                    test
+                <div class="col-md-6 col-xs-12 homepage-section cards-section">
+                    <!-- <div class="col-6 col-xs-12 card">
+                        <img src="http://placehold.it/100x70" alt="">
+                    </div>
+                    <div class="col-6 col-xs-12 card">
+                        <img src="http://placehold.it/100x70" alt="">
+                    </div>
+                    <div class="col-6 col-xs-12 card">
+                        <img src="http://placehold.it/100x70" alt="">
+                    </div>
+                    <div class="col-6 col-xs-12 card">
+                        <img src="http://placehold.it/100x70" alt="">
+                    </div>
+                </div> -->
+                    <div class="card">
+                        <img class="card-img-top" src="http://placehold.it/250x80" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">A propos de moi</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="http://placehold.it/250x80" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mes objectifs</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="http://placehold.it/250x80" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Actualités</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="http://placehold.it/250x80" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Me contacter</h5>
+                        </div>
+                    </div>
                 </div>
-            </div>
     </main>
 </body>
 <?php require_once('views/templates/footer.php');

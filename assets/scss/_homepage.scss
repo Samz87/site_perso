@@ -8,7 +8,6 @@
       margin-left: 0.5rem;
       margin-right: 0.5rem;
       max-width: 48vw;
-      height: 100vh;
       border-radius: 15px;
       padding-top: 1rem;
       .text-homepage {
@@ -21,6 +20,24 @@
         img {
           max-height: 100%;
           max-width: 100%;
+        }
+      }
+    }
+    .cards-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      min-height: fit-content;
+      padding: 1rem;
+      .card {
+        background-color: $yellow;
+        height: fit-content;
+        max-width: 100%;
+        margin: auto;
+        img {
+          margin: auto;
+          max-width: fit-content;
+          max-height: fit-content;
         }
       }
     }
