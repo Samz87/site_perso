@@ -21,12 +21,13 @@ header {
   }
   h2 {
     text-align: center;
-
   }
 }
 @media (max-width: 768px) {
-  img {
-    display: none;
+  header {
+    img {
+      display: none;
+    }
   }
   h2,
   h1 {
