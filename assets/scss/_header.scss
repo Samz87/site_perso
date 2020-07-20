@@ -14,13 +14,15 @@ header {
   }
 }
 @media (max-width: 1395px) {
-  .nav {
-    display: grid;
-    justify-content: center !important;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  h2 {
-    text-align: center;
+  header {
+    .nav {
+      display: grid;
+      justify-content: center !important;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    h2 {
+      text-align: center;
+    }
   }
 }
 @media (max-width: 768px) {
@@ -29,9 +31,11 @@ header {
       display: none;
     }
   }
-  h2,
-  h1 {
-    font-size: 150%;
-    margin-bottom: 1rem;
+  header {
+    h2,
+    h1 {
+      font-size: 150%;
+      margin-bottom: 1rem;
+    }
   }
 }

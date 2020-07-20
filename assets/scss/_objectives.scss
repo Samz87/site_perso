@@ -1,0 +1,32 @@
+.objectives {
+    .row {
+        margin-bottom: 1rem;
+        border-radius: 15px;
+        border: none;
+        .perso-obj,
+        .pro-obj {
+            background-color: $bg-lightgrey;
+            max-height: fit-content;
+            min-height: 70vh;
+            text-align: center;
+            h2 {
+                margin-top: .5rem;
+                font-size: 1.8em;
+            }
+            .obj {
+                border: 1px $bg-darkgrey solid;
+                border-radius: 15px;
+                margin: 1.5rem;
+                padding: 1rem;
+                .progress-bar {
+                    background-color: $yellow !important;
+                }
+                p {
+                    width: 100%;
+                    margin: auto;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
