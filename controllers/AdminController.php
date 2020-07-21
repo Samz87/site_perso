@@ -1,18 +1,15 @@
 <?php
-spl_autoload_register(function ($class) {
-    include 'models/' . $class . '.php';
-});
-
-function signupAction()
+function loginAction()
 {
-    if (isset($_POST['formconnect'])) {
-        $bdd        = new Bdd();
-        $connexion = $bdd->getConnection();
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $admin = new Admin();
-        $admin->connexionAdmin($connexion, $email, $password);
+    require('views/admin/login.php');
+}
+
+function indexAction()
+{
+    $pagetitle="BackOffice";
+    if (isset($_SESSION)) {
+        require('views/admin/index.php');
+    } else {
+        echo "vous n'avez pas acces a cette page";
     }
-    require "views/admin/index.php";
 }

@@ -1,20 +1,19 @@
 <?php require_once('views/templates/header.php'); ?>
+<?php
+// You'd put this code at the top of any "protected" page you create
 
-<body>
-    <main>
-        <form method="post">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-            </div>
-            <div class="">
-                <input class="" name="formconnect" type="submit" value="Envoyer" />
-            </div>
-        </form>
-    </main>
-</body>
+// Always start this first
+session_start();
+
+if ( isset( $_SESSION['user_id'] ) ) {
+    // Grab user data from the database using the user_id
+    // Let them access the "logged in only" pages
+} else {
+    // Redirect them to the login page
+    header("Location: 'localhost/site_perso'");
+}
+?>
+<main>
+    Backoffice
+</main>
 <?php require_once('views/templates/footer.php');
