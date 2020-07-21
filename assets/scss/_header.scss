@@ -4,6 +4,20 @@ header {
   background-color: $bg-grey;
   .header-col {
     text-align: center;
+    nav {
+      gap: .5rem;
+      button {
+        background-color: $bg-darkgrey;
+        border: 1px $bg-darkgrey solid;
+        border-radius: 15px;
+        margin: 5px 0 5px 0;
+        color: $yellow;
+        &:hover {
+          background-color: $yellow;
+          color: $bg-darkgrey;
+        }
+      }
+    }
     &.id-container {
       display: flex;
       flex-direction: row;

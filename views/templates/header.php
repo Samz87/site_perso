@@ -27,10 +27,10 @@
             <div class="header-col col-sm-4 col-xs-12">
                 <nav class="nav justify-content-end">
                     <!-- alignement droite -->
-                    <a class="nav-link active" href="<?php echo BASE_URL ?>about">A propos</a>
-                    <a class="nav-link" href="<?php echo BASE_URL ?>objectives">Objectifs</a>
-                    <a class="nav-link" href="<?php echo BASE_URL ?>blog">Actualités</a>
-                    <a class="nav-link" href="<?php echo BASE_URL ?>contact">Contact</a>
+                    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>about'">A propos</button>
+                    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>objectives'">Objectifs</button>
+                    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>blog'">Actualités</button>
+                    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>contact'">Contact</button>
                 </nav>
             </div>
         </div>
