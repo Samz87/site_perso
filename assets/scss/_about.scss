@@ -1,0 +1,30 @@
+.about-container {
+    .row {
+        align-items: center;
+        .img-about {
+            display: flex;
+            justify-content: center;
+            padding-left: 1.5rem; 
+            padding-right: 1.5rem;
+            max-height: 300px;
+      }   
+
+        .text-about {
+            display: flex;
+            align-items: center;
+            border: 1px $bg-grey solid;
+            border-radius: 15px;
+            padding: 1.5rem;
+            min-height: 300px;
+        }
+    }
+    .logos {
+        padding: 2rem;
+        .col {
+            text-align: center;
+            i {
+                color: $yellow;
+            }
+        }
+    }
+}

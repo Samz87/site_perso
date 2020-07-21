@@ -1,0 +1,21 @@
+/* Base imports */
+@import "variables/reset";
+@import "variables/fonts";
+@import "variables/colors";
+
+@import "layout";
+@import "header";
+@import "footer";
+@import "map";
+
+@import "homepage";
+@import "about";
+@import "objectives";
+@import "contact";
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
