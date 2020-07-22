@@ -20,9 +20,8 @@ class Admin
         $bdd        = new Database();
         $connection = $bdd->getConnection();
 
-        $email = htmlspecialchars($_POST())
-        $result = $connection->prepare("INSERT INTO admin (mail, pw) VALUES (:mail, :pw)");
 
+        $result = $connection->prepare("INSERT INTO admin (mail, pw) VALUES (:mail, :pw)");
         $result->execute($params);
    
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
