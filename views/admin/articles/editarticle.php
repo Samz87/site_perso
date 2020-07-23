@@ -36,4 +36,5 @@ if (isset($_SESSION['isLogged'])) {
     </div>
 </form>
 
+
 <?php require("views/templates/footer.php");?>
