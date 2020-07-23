@@ -30,6 +30,7 @@
             <div class="header-col col-sm-4 col-xs-12">
                 <nav class="nav justify-content-end">
                     <!-- alignement droite -->
+                    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin'">Backoffice</button>
                     <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin/logout'">Deconnexion</button>
                     <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>about'">A propos</button>
                     <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>objectives'">Objectifs</button>
