@@ -24,6 +24,6 @@ class Admin
 
         $result = $connection->prepare("INSERT INTO admin (mail, pw) VALUES (:mail, :pw)");
         $result->execute($params);
-   
+        
     }
 }

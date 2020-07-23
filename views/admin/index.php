@@ -6,7 +6,8 @@ if (isset($_SESSION['isLogged'])) {
 } ?>
 
 <main>
-    
+    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin/articles'">Gestion des articles</button>
+    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin/addarticle'">Ajouter un article</button>
 </main>
 
 <?php require_once('views/templates/footer.php'); ?>

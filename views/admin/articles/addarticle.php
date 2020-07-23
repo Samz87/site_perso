@@ -5,13 +5,13 @@ if (isset($_SESSION['isLogged'])) {
     require_once('views/templates/header.php');
 } ?>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div class="form_row">
         <input type="text" name="title" id="title" required />
         <label for="title">Titre :</label>
     </div>
     <div class="form_row">
-        <input type="text" name="img" id="img" />
+        <input type="file" name="img" id="img" />
         <label for="img">Image :</label>
     </div>
     <div class="form_row">
