@@ -1,4 +1,10 @@
-<?php require_once('views/templates/header.php'); ?>
+<?php
+if (!isset($_SESSION['isLogged'])) {
+    require_once('views/templates/header.php');
+} else {
+    require_once('views/templates/header_admin.php');
+} ?>
+
 <main>
     <div class="container-fluid objectives">
         <div class="row">

@@ -1,8 +1,12 @@
-<?php require_once('views/templates/header.php'); ?>
+<?php
+if (isset($_SESSION['isLogged'])) {
+    require_once('views/templates/header_admin.php');
+} else {
+    require_once('views/templates/header.php');
+} ?>
 
 <main>
-    Backoffice
-    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin/logout'">Deconnexion</button>
+    
 </main>
 
-<?php require_once('views/templates/footer.php');?>
+<?php require_once('views/templates/footer.php'); ?>

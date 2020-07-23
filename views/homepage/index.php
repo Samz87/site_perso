@@ -1,4 +1,9 @@
-<?php require_once('views/templates/header.php'); ?>
+<?php
+if (isset($_SESSION['isLogged'])) {
+    require_once('views/templates/header_admin.php');
+} else {
+    require_once('views/templates/header.php');
+} ?>
 
 <body>
     <main>
