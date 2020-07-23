@@ -24,6 +24,5 @@ class Admin
         $result = $connection->prepare("INSERT INTO admin (mail, pw) VALUES (:mail, :pw)");
         $result->execute($params);
    
-        return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 }
