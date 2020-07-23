@@ -86,24 +86,30 @@ function addarticleAction()
     if (isset($_POST['addarticle'])) {
 
         $title = htmlspecialchars($_POST['title']);
-        $img = htmlspecialchars($_POST['img']);
         $img_alt = htmlspecialchars($_POST['img_alt']);
         $content = htmlspecialchars($_POST['content']);
         $link = htmlspecialchars($_POST['link']);
         $dateCreation = date('Y-m-d H:i:s');
         $categorie = htmlspecialchars($_POST['categorie']);
 
-        $params = array(
-            'title' => $title,
-            'img' => $img,
-            'img_alt' => $img_alt,
-            'content' => $content,
-            'link' => $link,
-            'dateCreation' => $dateCreation,
-            'categorie' => $categorie,
-        );
-
-        Articles::addArticle($params);
+        $target_dir = "assets/img_articles/";
+        $target_file = $target_dir . basename($_FILES['img']["name"]);
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        if ($imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" and $_FILES["photoplat"]["size"] > 1000000) {
+            $params = array(
+                'title' => $title,
+                'img' => $target_file,
+                'img_alt' => $img_alt,
+                'content' => $content,
+                'link' => $link,
+                'dateCreation' => $dateCreation,
+                'categorie' => $categorie,
+            );
+            move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+            Articles::addArticle($params);
+        } else {
+            echo "Erreur";
+        }
 
         Header('Location: ' . BASE_URL . 'admin/articles/articles');
     }
@@ -119,7 +125,7 @@ function editarticleAction()
     $requestUri = str_replace(BASE_URL, '', $_SERVER['REQUEST_URI']);
     $requestParams = explode('/', $requestUri);
     $articleId = isset($requestParams[2]) ? $requestParams[2] : null;
-
+    
     $article = Articles::getArticle($articleId);
 
     if (isset($_POST['editarticle'])) {
@@ -151,7 +157,7 @@ function editarticleAction()
 function deletearticleAction()
 {
     isLogged();
-    $pagetitle ='Supprimer un article';
+    $pagetitle = 'Supprimer un article';
     $requestUri    = str_replace(BASE_URL, '', $_SERVER['REQUEST_URI']);
     $requestParams = explode('/', $requestUri);
     $articleId     = isset($requestParams[2]) ? $requestParams[2] : null;

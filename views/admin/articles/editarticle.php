@@ -11,7 +11,7 @@ if (isset($_SESSION['isLogged'])) {
         <label for="name">Nom :</label>
     </div>
     <div class="form_row">
-        <input type="text" name="img" id="img" value="<?php echo $article['img']; ?>" />
+        <input type="file" name="img" id="img" />
         <label for="img">Image :</label>
     </div>
     <div class="form_row">
@@ -35,5 +35,6 @@ if (isset($_SESSION['isLogged'])) {
         <input class="button" type="submit" value="Modifier" name="editarticle"/>
     </div>
 </form>
+
 
 <?php require("views/templates/footer.php");?>
