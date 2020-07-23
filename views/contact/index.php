@@ -1,4 +1,9 @@
-<?php require_once('views/templates/header.php'); ?>
+<?php
+if (isset($_SESSION['isLogged'])) {
+    require_once('views/templates/header_admin.php');
+} else {
+    require_once('views/templates/header.php');
+} ?>
 <main>
     <div class="container contact-container">
         <div class="row">

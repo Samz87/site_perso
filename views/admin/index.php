@@ -1,19 +1,12 @@
-<?php require_once('views/templates/header.php'); ?>
 <?php
-// You'd put this code at the top of any "protected" page you create
-
-// Always start this first
-session_start();
-
-if ( isset( $_SESSION['user_id'] ) ) {
-    // Grab user data from the database using the user_id
-    // Let them access the "logged in only" pages
+if (isset($_SESSION['isLogged'])) {
+    require_once('views/templates/header_admin.php');
 } else {
-    // Redirect them to the login page
-    header("Location: 'localhost/site_perso'");
-}
-?>
+    require_once('views/templates/header.php');
+} ?>
+
 <main>
-    Backoffice
+    
 </main>
-<?php require_once('views/templates/footer.php');
+
+<?php require_once('views/templates/footer.php'); ?>
