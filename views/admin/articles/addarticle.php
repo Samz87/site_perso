@@ -13,7 +13,7 @@ if (isset($_SESSION['isLogged'])) {
                         <input type="text" class="form-control" id="title" name="title" placeholder="Titre de l'article">
                     </div>
                     <div class="form-group">
-                        <input type="file" class="form-control" id="img" name="img" placeholder="Titre de l'article">
+                        <input type="file" class="form-control" id="img" name="img" placeholder="Image">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="img_alt" name="img_alt" placeholder="Description de l'image">

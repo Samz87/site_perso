@@ -150,7 +150,7 @@ function editarticleAction()
         header('Location: ' . BASE_URL . 'admin/articles/articles' . $article['id'] . '');
     }
 
-    $pagetitle = 'Modifier le projet "' . $article['title'] . '"';
+    $pagetitle = 'Modifier "' . $article['title'] . '"';
     require('views/admin/articles/editarticle.php');
 }
 
