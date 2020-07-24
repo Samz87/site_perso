@@ -8,7 +8,7 @@ if (isset($_SESSION['isLogged'])) {
     <div class="container">
         <div class="row">
             <div class="col">
-                <form class="addarticle_form" method="post" enctype="multipart/form-data">
+                <form class="article_form" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <input type="text" class="form-control" id="title" name="title" placeholder="Titre de l'article">
                     </div>
