@@ -18,7 +18,7 @@ class Articles {
     {
         self::BddConnect();
         $result = self::$connection->query('SELECT * FROM articles ORDER BY id ASC');
-        return $result ? $result->fetchAll(PDO::FETCH_ASSOC) : null;
+        return $result; 
     }
 
     public static function getArticle($articleId)
