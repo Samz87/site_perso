@@ -72,7 +72,7 @@ function logoutAction()
 function articlesAction()
 {
     isLogged();
-    $pagetitle = 'Gestion des Articles';
+    $pagetitle = 'Gestion des articles et projets';
     $articles      = Articles::getArticles();
 
 

@@ -46,7 +46,7 @@ if (isset($_SESSION['isLogged'])) {
                     <tfoot>
                         <tr>
                             <th colspan="9">
-                                <a class="button" href="<?php echo BASE_URL; ?>admin/addarticle/"><i class="fas fa-plus"></i> Ajouter un projet</a>
+                                <a class="button" href="<?php echo BASE_URL; ?>admin/addarticle/"><i class="fas fa-plus"></i> Ajouter</a> 
                             </th>
                         </tr>
                     </tfoot>
