@@ -1,8 +1,28 @@
 main {
   .blog {
-    hr {
-      border-top: solid black 0.5px;
-      width: 100vw;
+    max-width: 99vw !important;
+    col {
+      padding: 0 !important;
+    }
+    .slider {
+      .card {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        margin: 0 10px 0 10px;
+        p {
+          
+        }
+      }
+      h5 {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      img {
+        max-width: 300px;
+        max-height: 300px;
+      }
     }
   }
 }

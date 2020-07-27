@@ -7,5 +7,8 @@ function indexAction () {
     session_start();
     $pagetitle="Actualités";
     $articles     = Articles::getArticles();
+    $projs = Articles::getArticles();
+    
     require ('views/blog/index.php');
+
 }
