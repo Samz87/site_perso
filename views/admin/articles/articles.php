@@ -7,7 +7,7 @@ if (isset($_SESSION['isLogged'])) {
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="table-responsive">
+            <div class="table-responsive table-striped">
                 <table class="table table-responsive">
                     <thead>
                         <tr>

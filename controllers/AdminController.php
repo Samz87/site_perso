@@ -125,29 +125,49 @@ function editarticleAction()
     $requestUri = str_replace(BASE_URL, '', $_SERVER['REQUEST_URI']);
     $requestParams = explode('/', $requestUri);
     $articleId = isset($requestParams[2]) ? $requestParams[2] : null;
-    
+
     $article = Articles::getArticle($articleId);
 
     if (isset($_POST['editarticle'])) {
 
         $title = htmlspecialchars($_POST['title']);
-        $img = htmlspecialchars($_POST['img']);
         $img_alt = htmlspecialchars($_POST['img_alt']);
         $content = htmlspecialchars($_POST['content']);
         $link = htmlspecialchars($_POST['link']);
-        $categorie = htmlspecialchars($_POST['categorie']);
+        
 
-        $params = array(
-            'title' => $title,
-            'img' => $img,
-            'img_alt' => $img_alt,
-            'content' => $content,
-            'link' => $link,
-            'categorie' => $categorie,
-        );
+        if (!empty($_FILES['img']['name'])) {
+            $target_dir = "assets/img_articles/";
+            $img = $target_dir . basename($_FILES['img']["name"]);
+            $imageFileType = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+        } else {
+            $img = $article['img'];
+        }
+        if (!empty($_POST['categorie'])) {
+            $categorie = $_POST['categorie'];
+        } else {
+            $categorie = $article['categorie'];
+        }
 
-        Articles::editArticle($articleId, $params);
-        header('Location: ' . BASE_URL . 'admin/articles/articles' . $article['id'] . '');
+        if (!isset($imageFileType) or $imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" and $_FILES["img"]["size"] > 1000000) {
+
+            $params = array(
+                'title' => $title,
+                'img' => $img,
+                'img_alt' => $img_alt,
+                'content' => $content,
+                'link' => $link,
+                'categorie' => $categorie,
+            );
+            if (!isset($_FILES['img']['name'])) {
+                unlink($article['img']);
+            }
+            move_uploaded_file($_FILES["img"]["tmp_name"], $img);
+            Articles::editArticle($articleId, $params);
+            header('Location: ' . BASE_URL . 'admin/articles/articles' . $article['id'] . '');
+        } else {
+            echo "Erreur";
+        }
     }
 
     $pagetitle = 'Modifier "' . $article['title'] . '"';

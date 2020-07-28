@@ -14,6 +14,9 @@ if (isset($_SESSION['isLogged'])) {
                         <input type="text" class="form-control" id="title" name="title" value="<?php echo $article['title']; ?>" placeholder="Titre de l'article">
                     </div>
                     <div class="form-group">
+                        <div>
+                            <img src="<?php echo BASE_URL . $article['img']?>" alt="<?php echo $article['img_alt']?>" >
+                        </div>
                         <input type="file" class="form-control" id="img" name="img" placeholder="Image">
                     </div>
                     <div class="form-group">
@@ -27,6 +30,7 @@ if (isset($_SESSION['isLogged'])) {
                     </div>
                     <div class="form-group">
                         <select class="form-control" id="categorie" name="categorie" value="<?php echo $article['categorie']; ?>">
+                        <option selected disabled hidden>Catégorie</option>
                             <option>Articles</option>
                             <option>Projets</option>
                         </select>

@@ -1,7 +1,13 @@
 table {
+
     th {
         padding : 1rem 0 1rem 0;
         font-weight: 700;
+        max-width: 150px;
+    }
+    td {
+        max-width: 20vw;
+        overflow: hidden;
     }
     #id {
         font-weight: 700;

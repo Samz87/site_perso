@@ -8,12 +8,20 @@ main {
       .card {
         padding-left: 15px;
         padding-right: 15px;
-        max-height: 80vh;
+        max-height: 70vh;
         overflow-y: scroll;
         margin: 0 10px 0 10px;
-        p {
-          
+        .card-date {
+          font-size: 0.6rem;
         }
+        .card-text {
+          font-size: 0.75rem;
+          text-align: justify;
+          margin-top: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        
       }
       h5 {
         font-size: 1.25rem;
@@ -22,6 +30,7 @@ main {
       img {
         max-width: 300px;
         max-height: 300px;
+        margin: auto;
       }
     }
   }
