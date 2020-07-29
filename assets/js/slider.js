@@ -1,10 +1,11 @@
 $(document).ready(function(){
   $('.slider').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -12,7 +13,8 @@ $(document).ready(function(){
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: true,
+          arrows: true,
         }
       },
       {

@@ -1,7 +1,6 @@
 <?php
 require_once( 'models/Blog.php' );
 
-// this model is used for create/edit/delete projects visible at "portfolio/portfolio.php"
 class Articles {
     
     public static $connection;

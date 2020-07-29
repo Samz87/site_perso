@@ -95,7 +95,7 @@ function addarticleAction()
         $target_dir = "assets/img_articles/";
         $target_file = $target_dir . basename($_FILES['img']["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        if ($imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" and $_FILES["photoplat"]["size"] > 1000000) {
+        if ($imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" or $imageFileType == "JPG" or $imageFileType == "PNG" and $_FILES["img"]["size"] > 1000000) {
             $params = array(
                 'title' => $title,
                 'img' => $target_file,
@@ -149,7 +149,7 @@ function editarticleAction()
             $categorie = $article['categorie'];
         }
 
-        if (!isset($imageFileType) or $imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" and $_FILES["img"]["size"] > 1000000) {
+        if (!isset($imageFileType) or $imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" or $imageFileType == "JPG" or $imageFileType == "PNG" and $_FILES["img"]["size"] > 1000000) {
 
             $params = array(
                 'title' => $title,
