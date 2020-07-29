@@ -8,9 +8,12 @@
             gap: 1rem;
             text-align: center;
             padding: 2rem;
-            .social {
-
-            }
+            a, i{
+                color: $yellow !important;
+                &:hover {
+                    color: $bg-darkgrey !important;
+                }
+            } 
         }
         .contact-map {
             background-color: $bg-lightgrey;
