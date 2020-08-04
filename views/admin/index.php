@@ -6,8 +6,24 @@ if (isset($_SESSION['isLogged'])) {
 } ?>
 
 <main>
-    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin/articles'">Gestion des articles</button>
-    <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin/addarticle'">Ajouter un article</button>
+
+    <div class="container">
+        <div class="row admin_buttons">
+            <div class="col-4 cockpit" onclick="window.location.href='<?php echo BASE_URL ?>admin/articles'">
+                <h3>
+                    Gestion des articles
+                </h3>
+            </div>
+            <div class="col-4 cockpit" onclick="window.location.href='<?php echo BASE_URL ?>admin/addarticle'">
+                <h3>
+                    Créer un article
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
 </main>
+
 
 <?php require_once('views/templates/footer.php'); ?>
