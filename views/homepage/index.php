@@ -20,19 +20,6 @@ if (isset($_SESSION['isLogged'])) {
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12 homepage-section cards-section">
-                    <!-- <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                    <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                    <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                    <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                </div> -->
                     <div class="card">
                         <img class="card-img-top" src="http://placehold.it/250x80" alt="Card image cap">
                         <div class="card-body">
@@ -58,6 +45,8 @@ if (isset($_SESSION['isLogged'])) {
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </main>
 </body>
 <?php require_once('views/templates/footer.php');
