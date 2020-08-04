@@ -12,9 +12,12 @@ header {
         border-radius: 15px;
         margin: 5px 0 5px 0;
         color: $yellow;
+        transition: 0.3s;
         &:hover {
           background-color: $yellow;
           color: $bg-darkgrey;
+          -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
         }
       }
     }
