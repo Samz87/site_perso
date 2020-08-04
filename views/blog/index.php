@@ -16,7 +16,7 @@ if (isset($_SESSION['isLogged'])) {
                             <div class="card-img-overlay">
                                 <h5 class="card-title" id="project-title"><?php echo $proj['title'] ?></h5>
                                 <h6 class="card-date text-muted"><?php echo $proj['dateCreation'] ?></h6>
-                                <a href="https://<?php echo $proj['link'] ?>" class="btn btn-primary">Visiter le site</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://<?php echo $proj['link'] ?>" class="btn btn-primary">Visiter le site</a>
                             </div>
                         </div>
                 <?php }
@@ -34,7 +34,7 @@ if (isset($_SESSION['isLogged'])) {
                                 <h5 class="card-title"><?php echo $article['title'] ?></h5>
                                 <h6 class="card-date text-muted"><?php echo $article['dateCreation'] ?></h6>
                                 <p class="card-text"><?php echo $article['content'] ?></p>
-                                <a href="https://<?php echo $article['link'] ?>" class="btn btn-primary">Visiter le site</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://<?php echo $article['link'] ?>" class="btn btn-primary">Visiter le site</a>
                             </div>
                         </div>
                 <?php }

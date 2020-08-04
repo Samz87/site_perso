@@ -34,6 +34,12 @@
         height: fit-content;
         max-width: 100%;
         margin: auto;
+        &:hover {
+          -webkit-animation: flip-vertical-right 0.6s
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+          animation: flip-vertical-right 0.6s
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+        }
         img {
           margin: auto;
           max-width: fit-content;
@@ -43,7 +49,7 @@
     }
   }
 }
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .homepage-section {
     min-width: 99vw !important;
     height: fit-content !important;
