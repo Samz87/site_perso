@@ -28,7 +28,7 @@ if (isset($_SESSION['isLogged'])) {
                                 <td id="id"><?php echo $article['id']; ?></td>
                                 <td>
                                     <a href="<?php echo BASE_URL; ?>admin/editarticle/<?php echo $article['id']; ?>"><i class="fas fa-edit"></i></a>
-                                    <a class="a-beware" href="<?php echo BASE_URL; ?>admin/deletearticle/<?php echo $article['id']; ?>"><i class="fas fa-trash-alt"></i></a>
+                                <a class="a-beware" onclick="return confirm('Voulez-vous vraiment supprimer <?php echo $article['title']?> ?')" href="<?php echo BASE_URL; ?>admin/deletearticle/<?php echo $article['id']; ?>"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                                 <td><?php echo $article['title']; ?></td>
                                 <td><?php echo $article['img']; ?></td>
