@@ -35,10 +35,12 @@ main {
           margin-bottom: 1.5rem;
         }
         #project-title {
-          background-color: $yellow;
+          font-weight: 700;
+          color: $yellow;
+          background-color: $bg_darkgrey;
           width: fit-content;
           padding: 6px;
-          border-radius: 10px;
+          border-radius: 5px;
         }
         #project-img {
           opacity: 0.8;
@@ -54,6 +56,11 @@ main {
           color: $bg_darkgrey;
           border: none;
           margin-top: 5px;
+          transition: 0.2s;
+          &:hover {
+            color: $yellow;
+            background-color: $bg_darkgrey !important;
+          }
         }
       }
       img {

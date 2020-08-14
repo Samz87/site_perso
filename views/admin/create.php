@@ -1,5 +1,5 @@
 <?php
-$pagetitle="Connexion admin";
+$pagetitle="Inscription admin";
 if (isset($_SESSION['isLogged'])) {
     require_once('views/templates/header_admin.php');
 } else {
@@ -18,7 +18,7 @@ if (isset($_SESSION['isLogged'])) {
                         <label for="pw">Mot de passe</label>
                         <input type="password" class="form-control" name="pw" placeholder="Mot de passe">
                     </div>
-                    <button type="submit" class="btn btn-primary" value="Connexion" name="adminconnect">Connexion</button>
+                    <button type="submit" class="btn btn-primary" value="Connexion" name="admincreate">Inscription</button>
                 </form>
             </div>
         </div>

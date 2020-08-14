@@ -35,7 +35,7 @@ if (isset($_SESSION['isLogged'])) {
                 </a>
             </div>
             <div class="col-md-6 col-12 contact-map">
-                <div id="map">
+                <div id="map" data-toggle="tooltip" data-placement="top" title="Mobilité géographique">
                 </div>
             </div>
         </div>
