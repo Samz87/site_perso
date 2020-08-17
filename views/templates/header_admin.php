@@ -17,16 +17,16 @@
 <body>
     <header class="container-fluid">
         <div class="row">
-            <div class="header-col col-sm-4 col-xs-12 id-container">
+            <div class="header-col col-sm-4 col-12 id-container">
                 <a href="<?php echo BASE_URL ?>">
                     <img src="https://placehold.it/80x80" alt="">
                 </a>
                 <h2 class="justify-content-md-start justify-content-center">Developpy</h2>
             </div>
-            <div class="header-col col-sm-4 col-xs-12 d-flex justify-content-center">
+            <div class="header-col col-sm-4 col-12 d-flex justify-content-center">
                 <h1><?php echo $pagetitle ?></h1>
             </div>
-            <div class="header-col col-sm-4 col-xs-12">
+            <div class="header-col col-sm-4 col-12">
                 <nav class="nav justify-content-end">
                     <!-- alignement droite -->
                     <button class="nav-link" onclick="window.location.href='<?php echo BASE_URL ?>admin'">Backoffice</button>
