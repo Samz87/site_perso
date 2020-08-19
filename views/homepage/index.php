@@ -44,7 +44,7 @@ if (isset($_SESSION['isLogged'])) {
                             <h5 class="card-title">Me contacter</h5>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </main>
