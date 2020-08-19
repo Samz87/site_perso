@@ -1,0 +1,15 @@
+.article_form {
+  margin: 1rem 0 1rem 0 ;
+  #content {
+    width: 100%;
+    min-height: 100px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}

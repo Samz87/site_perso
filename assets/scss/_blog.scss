@@ -1,0 +1,75 @@
+main {
+  .blog {
+    max-width: 99vw !important;
+    h2 {
+      margin: auto;
+      font-size: 1.4rem;
+      text-align: center;
+      background-color: $bg_darkgrey;
+      color: $yellow;
+      width: fit-content;
+      border-radius: 10px;
+      border: none;
+      padding: 8px ;
+      margin-bottom: 1.4em;
+      margin-top: 20px;
+    }
+    col {
+      padding: 0 !important;
+    }
+    .slider {
+      .article_card {
+        overflow-y: scroll;
+        max-height: 60vh;
+      }
+      .card {
+        margin: 0 10px 0 10px;
+        min-height: 150px;
+        .card-date {
+          font-size: 0.6rem;
+        }
+        .card-text {
+          font-size: 0.75rem;
+          text-align: justify;
+          margin-top: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+        #project-title {
+          font-weight: 700;
+          color: $yellow;
+          background-color: $bg_darkgrey;
+          width: fit-content;
+          padding: 6px;
+          border-radius: 5px;
+        }
+        #project-img {
+          opacity: 0.8;
+          max-width: 300px;
+          max-height: 300px;
+          height: 100%;
+          width: 100%;
+
+        }
+
+        .btn-primary {
+          background-color: $yellow !important;
+          color: $bg_darkgrey;
+          border: none;
+          margin-top: 5px;
+          transition: 0.2s;
+          &:hover {
+            color: $yellow;
+            background-color: $bg_darkgrey !important;
+          }
+        }
+      }
+      img {
+        margin: auto;
+      }
+      h5 {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

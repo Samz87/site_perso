@@ -1,4 +1,9 @@
-<?php require_once('views/templates/header.php'); ?>
+<?php
+if (isset($_SESSION['isLogged'])) {
+    require_once('views/templates/header_admin.php');
+} else {
+    require_once('views/templates/header.php');
+} ?>
 
 <body>
     <main>
@@ -15,19 +20,6 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12 homepage-section cards-section">
-                    <!-- <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                    <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                    <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                    <div class="col-6 col-xs-12 card">
-                        <img src="http://placehold.it/100x70" alt="">
-                    </div>
-                </div> -->
                     <div class="card">
                         <img class="card-img-top" src="http://placehold.it/250x80" alt="Card image cap">
                         <div class="card-body">
@@ -52,7 +44,9 @@
                             <h5 class="card-title">Me contacter</h5>
                         </div>
                     </div>
-                </div>
+                </div> 
+            </div>
+        </div>
     </main>
 </body>
 <?php require_once('views/templates/footer.php');

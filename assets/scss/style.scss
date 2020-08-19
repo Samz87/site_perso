@@ -7,11 +7,16 @@
 @import "header";
 @import "footer";
 @import "map";
+@import "animations";
 
 @import "homepage";
 @import "about";
 @import "objectives";
 @import "contact";
+@import "blog";
+@import "admin/add";
+@import "admin/table";
+@import "admin/cockpit";
 
 body{
     height: 100vh;
