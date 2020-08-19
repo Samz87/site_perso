@@ -18,43 +18,40 @@ function indexAction()
     require('views/admin/index.php');
 }
 
-function registerAction()
+function createAction()
 {
-    if (isset($_POST['adminconnect'])) {
+    if (isset($_POST['admincreate'])) {
         $mail    = htmlspecialchars($_POST['mail']);
         $password = htmlspecialchars($_POST['pw']);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
 
         $params = [
             'mail'     => $mail,
-            'pw' => $password,
+            'pw' => $hash,
         ];
 
         $result      = Admin::AdminCreate($params);
-
         Header('Location: ' . BASE_URL . '');
     }
 
     $pagetitle = 'Tableau de bord';
-    require_once('views/admin/login.php');
+    require_once('views/admin/create.php');
 }
 
 function loginAction()
 {
     if (isset($_POST['adminconnect'])) {
+
         $mail    = htmlspecialchars($_POST['mail']);
         $password = htmlspecialchars($_POST['pw']);
 
-        $params = [
-            'mail'     => $mail,
-            'pw' => $password,
-        ];
 
-        $result      = Admin::AdminLogin($params);
-
-        if ($result) {
+        $result      = Admin::AdminLogin($mail);
+        if ($result && password_verify($password, $result['pw'])) {
+            session_start();
             $_SESSION['isLogged'] = $result['id']; // session creation
-        };
-        session_start();
+        }
+
         Header('Location: ' . BASE_URL . 'admin');
     }
 
@@ -134,7 +131,7 @@ function editarticleAction()
         $img_alt = htmlspecialchars($_POST['img_alt']);
         $content = htmlspecialchars($_POST['content']);
         $link = htmlspecialchars($_POST['link']);
-        
+
 
         if (!empty($_FILES['img']['name'])) {
             $target_dir = "assets/img_articles/";
